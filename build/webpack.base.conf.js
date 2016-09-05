@@ -1,3 +1,5 @@
+var px2rem = require('postcss-px2rem');
+
 var path = require('path')
 var config = require('../config')
 var utils = require('./utils')
@@ -25,20 +27,21 @@ module.exports = {
 		fallback: [path.join(__dirname, '../node_modules')]
 	},
 	module: {
-		preLoaders: [
-			{
-				test: /\.vue$/,
-				loader: 'eslint',
-				include: projectRoot,
-				exclude: /node_modules/
-			},
-			{
-				test: /\.js$/,
-				loader: 'eslint',
-				include: projectRoot,
-				exclude: /node_modules/
-			}
-		],
+		// eslint 检查
+		// preLoaders: [
+		// 	{
+		// 		test: /\.vue$/,
+		// 		loader: 'eslint',
+		// 		include: projectRoot,
+		// 		exclude: /node_modules/
+		// 	},
+		// 	{
+		// 		test: /\.js$/,
+		// 		loader: 'eslint',
+		// 		include: projectRoot,
+		// 		exclude: /node_modules/
+		// 	}
+		// ],
 		loaders: [
 			{
 				test: /\.vue$/,
@@ -50,6 +53,10 @@ module.exports = {
 				include: projectRoot,
 				exclude: /node_modules/
 			},
+			// {
+			// 	test: /\.css$/,
+			// 	loader: "style-loader!css-loader!postcss-loader"
+			// },
 			{
 				test: /\.json$/,
 				loader: 'json'
@@ -76,10 +83,25 @@ module.exports = {
 			}
 		]
 	},
-	eslint: {
-		formatter: require('eslint-friendly-formatter')
-	},
+	// eslint 检查
+	// eslint: {
+	// 	formatter: require('eslint-friendly-formatter')
+	// },
 	vue: {
-		loaders: utils.cssLoaders()
-	}
+		loaders: utils.cssLoaders(),
+		postcss: [require('postcss-px2rem')({
+			baseDpr: 2,             // base device pixel ratio (default: 2)
+			threeVersion: false,    // whether to generate @1x, @2x and @3x version (default: false)
+			remVersion: true,       // whether to generate rem version (default: true)
+			remUnit: 75,            // rem unit value (default: 75)
+			remPrecision: 6         // rem precision (default: 6)
+		})],
+		// 文档 https://github.com/postcss/autoprefixer#options
+		autoprefixer: {
+			// 该配置的文档 https://github.com/ai/browserslist#queries
+			// browsers: ["Android >= 2.3", "ChromeAndroid > 1%", "iOS >= 4"],
+			browsers: ['last 2 versions'],
+			cascade: true  // 不美化输出 css
+		}
+	},
 }

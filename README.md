@@ -28,4 +28,4 @@ npm test
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 # vue_example
-了解vue-cli创建的demo
+基于vuejs生态组件创建的demo，用于开发H5轻应用。

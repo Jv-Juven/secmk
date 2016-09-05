@@ -19,6 +19,9 @@
 			<a href="https://github.com/vuejs/vue-router/" target="_blank">vue-router</a> for routing and
 			<a href="https://github.com/vuejs/vuex/" target="_blank">vuex</a> for state management.
 		</p>
+		<div class="test">
+			这是测试的文字
+		</div>
 	</div>
 </template>
 
@@ -60,5 +63,11 @@ body {
 .logo {
 	width: 100px;
 	height: 100px
+}
+.test {
+	font-size: 16px;
+	width: 600px; /*no*/
+	height: 200px;
+	background: rgba(0, 0, 0, 0.5);
 }
 </style>

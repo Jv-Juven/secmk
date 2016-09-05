@@ -34,13 +34,23 @@ exports.cssLoaders = function (options) {
 
 	// http://vuejs.github.io/vue-loader/configurations/extract-css.html
 	return {
+		// 原来的
 		css: generateLoaders(['css']),
 		postcss: generateLoaders(['css']),
-		less: generateLoaders(['css', 'less']),
+		less: generateLoaders(['css', 'less?outputStyle=expanded']),
 		sass: generateLoaders(['css', 'sass?indentedSyntax']),
 		scss: generateLoaders(['css', 'sass']),
 		stylus: generateLoaders(['css', 'stylus']),
 		styl: generateLoaders(['css', 'stylus'])
+
+		// 根据网上修改的
+		// css: generateLoaders(['css?-autoprefixer']),
+		// postcss: generateLoaders(['css?-autoprefixer']),
+		// less: generateLoaders(['css?-autoprefixer', 'less?outputStyle=expanded']),
+		// sass: generateLoaders(['css?-autoprefixer', 'sass?indentedSyntax']),
+		// scss: generateLoaders(['css?-autoprefixer', 'sass?outputStyle=expanded']),
+		// stylus: generateLoaders(['css?-autoprefixer', 'stylus']),
+		// styl: generateLoaders(['css?-autoprefixer', 'stylus']),
 	}
 }
 
