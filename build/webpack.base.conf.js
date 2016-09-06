@@ -23,6 +23,8 @@ module.exports = {
 			'views': path.resolve(__dirname, '../src/views'),
 			'components': path.resolve(__dirname, '../src/components'),
 			'static': path.resolve(__dirname, '../static'),
+			'data': path.resolve(__dirname, '../src/vuex'),
+			'util': path.resolve(__dirname, '../src/utils'),
 		}
 	},
 	resolveLoader: {

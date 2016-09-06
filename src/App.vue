@@ -5,12 +5,11 @@
 </template>
 
 <script>
-import Hello from './components/Hello'
+// import Hello from './components/Hello'
+import store from 'data/store'
 
 export default {
-	components: {
-		Hello
-	}
+	store,
 }
 </script>
 

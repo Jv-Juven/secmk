@@ -2,18 +2,14 @@
     <div class="swiper-slide single-page">0004</div>
 </template>
 <script type="text/javascript">
+    import * as actions from 'data/actions'
     export default {
-        props: {
-            funcs: {
-                type: Array,
-                default() {
-                    return []
-                }
-            }
+        vuex: {
+            actions
         },
-        created() {
+        ready() {
             // 页面函数队列
-            Array.prototype.push.call(this.funcs, () => {
+            this.pushFuncs(() => {
                 console.log("004");
             })
         }
