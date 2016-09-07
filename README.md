@@ -27,5 +27,5 @@ npm test
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-# vue_example
-基于vuejs生态组件创建的demo，用于开发H5轻应用。
+## secmk
+secondaryMarket 的前端代码部分，基于Vuejs生态组件（框架）搭建。单页应用，只有个入口文件。
