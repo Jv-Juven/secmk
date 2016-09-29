@@ -8,6 +8,7 @@ var ora = require('ora')
 var webpack = require('webpack')
 var webpackConfig = require('./webpack.prod.conf')
 
+
 console.log(
 	'  Tip:\n' +
 	'  Built files are meant to be served over an HTTP server.\n' +
@@ -32,4 +33,6 @@ webpack(webpackConfig, function (err, stats) {
 		chunks: false,
 		chunkModules: false
 	}) + '\n')
+	console.log("编译完成");
+	exec('gulp');
 })
