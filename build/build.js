@@ -34,5 +34,5 @@ webpack(webpackConfig, function (err, stats) {
 		chunkModules: false
 	}) + '\n')
 	console.log("编译完成");
-	exec('gulp');
+	// exec('gulp');
 })
