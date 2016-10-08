@@ -23,8 +23,12 @@
 
     .a {
         margin: 200px auto;
-        width: 100px; /*px*/ 
+        width: 100px; /*px*/
         height: 100px; /*no*/
         background: rgba(0, 0, 0, 0.5);
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 </style>

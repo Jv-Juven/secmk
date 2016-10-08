@@ -107,11 +107,11 @@ module.exports = {
 		// 	css: "style-loader!css-loader!postcss-loader"
 		// }
 		// 文档 https://github.com/postcss/autoprefixer#options
-		autoprefixer: {
-			// 该配置的文档 https://github.com/ai/browserslist#queries
-			// browsers: ["Android >= 2.3", "ChromeAndroid > 1%", "iOS >= 4"],
-			browsers: ['last 2 versions'],
-			cascade: true  // 不美化输出 css
-		}
+		// autoprefixer: {
+		// 	// 该配置的文档 https://github.com/ai/browserslist#queries
+		// 	// browsers: ["Android >= 2.3", "ChromeAndroid > 1%", "iOS >= 4"],
+		// 	browsers: ['last 2 versions'],
+		// 	cascade: true  // 不美化输出 css
+		// }
 	},
 }
