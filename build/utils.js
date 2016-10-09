@@ -37,7 +37,7 @@ exports.cssLoaders = function (options) {
 		// 原来的
 		css: generateLoaders(['css']),
 		postcss: generateLoaders(['css']),
-		less: generateLoaders(['css', 'less?outputStyle=expanded', 'autoprefixer', 'px2rem']),
+		less: generateLoaders(['css', 'less?outputStyle=expanded', 'px2rem', 'autoprefixer']),
 		sass: generateLoaders(['css', 'sass?indentedSyntax']),
 		scss: generateLoaders(['css', 'sass']),
 		stylus: generateLoaders(['css', 'stylus']),
