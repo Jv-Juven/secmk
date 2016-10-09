@@ -9,6 +9,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 var env = process.env.NODE_ENV === 'testing'
 	? require('../config/test.env')
 	: config.build.env
+var UglifyJsPlugin = require('uglify-js-plugin');
 
 var webpackConfig = merge(baseWebpackConfig, {
 	module: {
@@ -77,7 +78,8 @@ var webpackConfig = merge(baseWebpackConfig, {
 		new webpack.optimize.CommonsChunkPlugin({
 			name: 'manifest',
 			chunks: ['vendor']
-		})
+		}),
+		new UglifyJsPlugin({debug: true}),
 	]
 })
 
