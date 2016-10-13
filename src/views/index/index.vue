@@ -22,6 +22,7 @@
     import Page2 from "components/page2"
     import Page3 from "components/page3"
     import Page4 from "components/page4"
+    import TitleHeader from "./header"
     export default {
         data() {
             return {}
@@ -34,6 +35,7 @@
             Page2,
             Page3,
             Page4,
+            TitleHeader,
         },
         ready() {
             let _this = this;
